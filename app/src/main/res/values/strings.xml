@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="Start">Start</string>
+    <string name="with_friend">With Friend</string>
+    <string name="left"><![CDATA[<]]></string>
+    <string name="right"><![CDATA[>]]></string>
+    <string name="tttText">tttText</string>
+    <string name="tttLogo">tttLogo</string>
+    <string name="tictactoeSticks">tictactoeSticks</string>
+    <string name="tictactoeXO">tictactoeXO</string>
+    <string name="gifPlace">gifPlace</string>
+    <string name="goBack">goBack</string>
+    <string name="quit">Quit</string>
+    <string name="tttcell">tttcell</string>
+</resources>

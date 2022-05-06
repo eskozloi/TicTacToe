@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/tictactoebg">
+
+    <ImageView
+        android:id="@+id/gifplace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/gifPlace" />
+
+    <ImageButton
+        android:id="@+id/goback"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:contentDescription="@string/goBack"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tictactoegoback" />
+
+    <ImageButton
+        android:id="@+id/restart"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:contentDescription="@string/goBack"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tictactoerestart" />
+
+    <ImageView
+        android:id="@+id/tictactoecell"
+        android:layout_width="307dp"
+        android:layout_height="409dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tictactoecell"
+        android:contentDescription="@string/tttcell" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="41dp"
+        android:clickable="false"
+        android:gravity="center|fill"
+        android:stretchColumns="0, 1, 2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tictactoecell"
+        app:layout_constraintEnd_toEndOf="@+id/tictactoecell"
+        app:layout_constraintStart_toStartOf="@+id/tictactoecell"
+        app:layout_constraintTop_toTopOf="@+id/tictactoecell">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:addStatesFromChildren="false"
+            android:gravity="center"
+            android:minHeight="100dp">
+
+            <ImageButton
+                android:id="@+id/button1"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="0" />
+
+            <ImageButton
+                android:id="@+id/button2"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="1"
+                app:backgroundTint="#4BA54F"
+                app:cornerRadius="10dp" />
+
+            <ImageButton
+                android:id="@+id/button3"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:addStatesFromChildren="false"
+            android:gravity="center"
+            android:minHeight="100dp">
+
+            <ImageButton
+                android:id="@+id/button4"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="3" />
+
+            <ImageButton
+                android:id="@+id/button5"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="4" />
+
+            <ImageButton
+                android:id="@+id/button6"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="5" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:addStatesFromChildren="false"
+            android:gravity="center"
+            android:minHeight="100dp">
+
+            <ImageButton
+                android:id="@+id/button7"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="6" />
+
+            <ImageButton
+                android:id="@+id/button8"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="7" />
+
+            <ImageButton
+                android:id="@+id/button9"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="0dp"
+                android:maxHeight="0dp"
+                android:scaleType="fitCenter"
+                android:tag="8" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoecell" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

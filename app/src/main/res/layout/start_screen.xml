@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tictactoebg">
+
+    <ImageView
+        android:id="@+id/gifplace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/gifPlace" />
+
+    <!--<ImageButton
+        android:id="@+id/leave"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:contentDescription="@string/goBack"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tictactoeleave" />-->
+
+    <ImageView
+        android:id="@+id/tictactoexo"
+        android:layout_width="193dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="34dp"
+        android:contentDescription="@string/tictactoeXO"
+        app:layout_constraintBottom_toBottomOf="@+id/tictactoecell"
+        app:layout_constraintEnd_toEndOf="@+id/tictactoecell"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/tictactoecell"
+        app:layout_constraintTop_toTopOf="@+id/tictactoecell"
+        app:layout_constraintVertical_bias="0.703"
+        app:srcCompat="@drawable/tictactoexo" />
+
+    <ImageView
+        android:id="@+id/tictactoecell"
+        android:layout_width="215dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="1dp"
+        android:contentDescription="@string/tictactoeSticks"
+        app:layout_constraintBottom_toTopOf="@+id/tictactoeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925"
+        app:srcCompat="@drawable/tictactoesticks" />
+
+    <ImageView
+        android:id="@+id/tictactoeTitle"
+        android:layout_width="367dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="140dp"
+        android:contentDescription="@string/tttText"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tictactoetext" />
+
+    <TextView
+        android:id="@+id/mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/firstfont"
+        android:text="@string/with_friend"
+        android:textColor="#14344A"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoeTitle"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLeft"
+        android:layout_width="47dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="1dp"
+        android:background="@null"
+        android:fontFamily="@font/firstfont"
+        android:onClick="onClick"
+        android:text="@string/left"
+        android:textColor="#14344A"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mode"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoeTitle"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRight"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="1dp"
+        android:background="@null"
+        android:fontFamily="@font/firstfont"
+        android:onClick="onClick"
+        android:text="@string/right"
+        android:textColor="#14344A"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/mode"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoeTitle"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/secondfont"
+        android:onClick="onClick"
+        android:text="@string/Start"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:theme="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mode"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:background="@null"
+        android:fontFamily="@font/secondfont"
+        android:onClick="onClick"
+        android:text="@string/quit"
+        android:textAllCaps="false"
+        android:textColor="#14344A"
+        android:textSize="26sp"
+        android:theme="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/gifplace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>
